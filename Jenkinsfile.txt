@@ -18,7 +18,7 @@ pipeline {
         stage('Cloning from Hithub') {
             steps {
                echo "**************** Start cloning from Hithub ***************************"
-               sh "git clone https://github.com/stas-kuznetsov/SSD111.git /Jenkins"
+               sh "git clone https://github.com/andrb001/ssd111.git /Jenkins"
                echo "**************** Cloning from Hithub is completed ***************************"
                     }
                                             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Deploying web site') {
             steps {
                 echo "**************** Start deploying web site ***************************"
-                sh "ansible-playbook /Jenkins/web.yml -u stas --private-key /var/lib/jenkins/key/id_rsa"
+                sh "ansible-playbook /Jenkins/web.yml -u andrii"
                 echo "**************** Deploying web site is completed ***************************"
                     }  
 
