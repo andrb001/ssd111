@@ -11,6 +11,8 @@ pipeline {
                echo "**************** Start cleaning ***************************"
                sh "rm -Rf /Jenkins/*"
                sh "rm -Rf /Jenkins/.git"
+               sh "rm -Rf /Jenkins2/*"
+               sh "rm -Rf /Jenkins2/.git"
                echo "**************** cleaning is completed ***************************"
                     }
         }
