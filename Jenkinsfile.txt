@@ -17,12 +17,20 @@ pipeline {
         
         stage('Cloning from Hithub') {
             steps {
-               echo "**************** Start cloning from Hithub ***************************"
-               sh "git clone https://github.com/andrb001/ssd111.git /Jenkins"
+               echo "**************** Start cloning from Hithub branch MAIN ***************************"
+               sh "git clone -b main https://github.com/andrb001/ssd111.git /Jenkins"
+               echo "**************** Cloning from Hithub is completed ***************************"
+                    }
+                                            }
+        stage('Cloning from Hithub') {
+            steps {
+               echo "**************** Start cloning from Hithub branch TEST ***************************"
+               sh "git clone -b test https://github.com/andrb001/ssd111.git /Jenkins"
                echo "**************** Cloning from Hithub is completed ***************************"
                     }
                                             }
                     
+
         stage('Deploying web site') {
             steps {
                 echo "**************** Start deploying web site ***************************"
