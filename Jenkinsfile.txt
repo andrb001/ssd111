@@ -32,6 +32,7 @@ pipeline {
             steps {
                 echo "**************** Start deploying web site ***************************"
                 sh "ansible-playbook /Jenkins/web.yml -u andrii"
+		sh "ansible-playbook /Jenkins2/web.yml -u andrii"
                 echo "**************** Deploying web site is completed ***************************"
                     }  
 
