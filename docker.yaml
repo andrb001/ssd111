@@ -22,7 +22,7 @@
       
 
     - name: Pull Docker image
-      command: docker pull andrb001/andnew:{{ build }}
+      command: docker pull andrb001/andnew:v1
 
     - name: Run Docker image
-      command: docker run -d -p 8080:80 andrb001/andnew:{{ build }}
+      command: docker run -d -p 8080:80 andrb001/andnew:v1
